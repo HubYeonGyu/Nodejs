@@ -1,10 +1,10 @@
 var http = require('http');
 var fs = require('fs');
-var url = require('url');
-var qs = require('querystring');
+var url = require('url');   //소스 삽입, 기존 url을 _url로 변경
+var qs = require('querystring'); // parse 메소드를 이용해 url쿼리 스트링을 해석하고 포멧팅 할 수 있다.
 
 function templateHTML(title, list, body, control){   //변수 title, list, body, control를 받는 templateHTML라는 함수 생성
-  return `                                           //8~20 return값
+  return `                                           //8~20 return
   <!doctype html>
   <html>
   <head>
@@ -123,4 +123,4 @@ var app = http.createServer(function(request,response){
       response.end('Not found');
     }
 });
-app.listen(3000);
+app.listen(3000); //포트 번호(localhost:3000을 입력하묜 동작을 확인할 수 있다.
