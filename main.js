@@ -1,6 +1,6 @@
 var http = require('http');
 var fs = require('fs');
-var url = require('url');
+var url = require('url');       //소스 삽입, 기존 url을 _url로 변경
 var qs = require('querystring');
 
 function templateHTML(title, list, body, control){
