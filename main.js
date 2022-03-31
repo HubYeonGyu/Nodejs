@@ -1,10 +1,10 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');       //소스 삽입, 기존 url을 _url로 변경
-var qs = require('querystring');
+var qs = require('querystring'); // parse 메소드를 이용해 url쿼리 스트링을 해석하고 포멧팅 할 수 있다.
 
-function templateHTML(title, list, body, control){
-  return `
+function templateHTML(title, list, body, control){    //변수 title, list, body, control를 받는 templateHTML라는 함수 생성
+  return `                                           //8~20 return
   <!doctype html>
   <html>
   <head>
@@ -20,7 +20,7 @@ function templateHTML(title, list, body, control){
   </html>
   `;
 }
-function templateList(filelist){
+function templateList(filelist){  //filelist는 데이터 디렉토리 파일의 리스트인데 templateList에 입력값으로 주면 filelist의 값을 받아서 list정보(24~30)를 만든다. 
   var list = '<ul>';
   var i = 0;
   while(i < filelist.length){
@@ -28,7 +28,7 @@ function templateList(filelist){
     i = i + 1;
   }
   list = list+'</ul>';
-  return list;
+  return list;                             //만들어진 list를 return한다.
 }
 
 var app = http.createServer(function(request,response){
@@ -123,4 +123,4 @@ var app = http.createServer(function(request,response){
       response.end('Not found');
     }
 });
-app.listen(3000);
+app.listen(3000);     //포트 번호(localhost:3000)을 입력하면 동작을 확인할 수 있다.
