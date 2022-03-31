@@ -28,7 +28,7 @@ function templateList(filelist){   //filelist는 데이터 디렉토리 파일�
     i = i + 1;
   }
   list = list+'</ul>';
-  return list;                               만들어진 list를 return한다.
+  return list;                               //만들어진 list를 return한다.
 }
 
 var app = http.createServer(function(request,response){
