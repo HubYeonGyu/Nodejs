@@ -123,4 +123,4 @@ var app = http.createServer(function(request,response){
       response.end('Not found');
     }
 });
-app.listen(3000); //포트 번호(localhost:3000을 입력하묜 동작을 확인할 수 있다.
+app.listen(3000); //포트 번호(localhost:3000)을 입력하면 동작을 확인할 수 있다.
